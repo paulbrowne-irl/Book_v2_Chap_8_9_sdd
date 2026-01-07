@@ -21,6 +21,7 @@ A Java-based  application that digitizes the National Emergency Medicine Program
 
 ### Layout Mockup
 
+
 **Tab 1: Setup**
 ```
 ┌─────────────────────────────────────────┐
@@ -57,11 +58,43 @@ A Java-based  application that digitizes the National Emergency Medicine Program
 └─────────────────────────────────────────┘
 ```
 
+**Initial Menu** 
+1. Triage Patient
+2. List Available Symptoms
+3. Generate Rules from PDF
+4. Exit
+
+
 ---
 
 ## Features
 
-### Feature 1: Rule Generation
+### Feature 1: Patient Triage
+
+**Input:**
+- **Age:** Numeric input for patient age.
+- **Symptoms:** Dropdown selection populated dynamically from the generated rules. Users can add multiple symptoms.
+
+**Behavior:**
+- Engine matches patient data against 700+ generated rules.
+- Determines the highest priority (lowest category number) triggered.
+- If no specific rule matches, defaults to "Blue".
+
+**Output:**
+- **Triage Result:** Displayed as Text (e.g., "Red") and color-coded visually.
+
+---
+
+### Feature 2: Dynamic Symptom List
+
+**Behavior:**
+- Reads the generated DRL file.
+- Extracts unique symptom names used in `Symptom( name == "..." )` patterns.
+- Populates the symptom dropdown to ensure users can only select valid, rule-triggering symptoms.
+
+---
+
+### Feature 3: Rule Generation
 
 **Input:**
 - Source PDF file: `national-emergency-medicine-programme-irish-childrens-triage-system-icts.pdf`
@@ -78,36 +111,11 @@ A Java-based  application that digitizes the National Emergency Medicine Program
 
 ---
 
-### Feature 2: Patient Triage
-
-**Input:**
-- **Age:** Numeric input for patient age.
-- **Symptoms:** Dropdown selection populated dynamically from the generated rules. Users can add multiple symptoms.
-
-**Behavior:**
-- Engine matches patient data against 700+ generated rules.
-- Determines the highest priority (lowest category number) triggered.
-- If no specific rule matches, defaults to "Blue".
-
-**Output:**
-- **Triage Result:** Displayed as Text (e.g., "Red") and color-coded visually.
-
----
-
-### Feature 3: Dynamic Symptom List
-
-**Behavior:**
-- Reads the generated DRL file.
-- Extracts unique symptom names used in `Symptom( name == "..." )` patterns.
-- Populates the symptom dropdown to ensure users can only select valid, rule-triggering symptoms.
-
----
-
 ## Technical Architecture
 
 ### Business Components
 
-1.  **Data Model**:
+i.  **Data Model**:
     - `Patient`: Holds ID, Age, List of Symptoms.
     - `Symptom`: Wrapper for symptom strings.
     - `TriageResult`: Encapsulates Color and Priority.
@@ -120,25 +128,23 @@ A Java-based  application that digitizes the National Emergency Medicine Program
 2.  **PDF Parser (`TriageRuleGenerator`)**:
     - library: `Apache PDFBox`
     - Logic: Custom `PDFTextStripper` using X/Y coordinates to structure unstructured PDF content.
-
-2.  **Rules Engine (`TriageEngine`)**:
+3.  **Rules Engine (`TriageEngine`)**:
     - Library: `Drools (Apache KIE)`
     - Logic: Stateful/Stateless session execution against the generated DRL.
 
-
-
-5.  **Spring Framework**:
+4.  **Spring Framework**:
     - Use the Spring Boot framework to create a REST API for the application.
     - Use the Spring Boot framework to create a web application for the application.
     - Use the Spring Boot framework to create a command line interface for the application.
     - Use the Spring Boot framework to create a JAR file for the application.
 
 6.  **Testing**:
-    - Use JUnit for unit testing.
-    - Use Mockito for mocking.
+    - Use Serenity for testing and create tests
+    - Extract 3 scenarios 
+    - write a script
     - 
 
-6. **README.md**:
+7. **README.md**:
     - Provide a clear readme.md summarizing what the application does
     - Provide a clear readme.md file documenting the how to generate the rules and run the application via Web, Command line and Swing.
     - Provide a clear readme.md file documenting the how to run the tests

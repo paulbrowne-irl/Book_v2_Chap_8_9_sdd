@@ -24,3 +24,6 @@ hs_err_pid*
 replay_pid*
 
 target/
+src/test/resources/features/triage/triage.feature
+target/triage-system-1.0-SNAPSHOT.jar
+target/triage-system-1.0-SNAPSHOT.jar.original

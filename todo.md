@@ -1,21 +1,16 @@
-Tighten spec
-tweak spec to suggest symptoms.
+
 
 New spec add gui
 new spec add interface
-new spec (for later chapter) add MCP sever
+new spec (for later chapter) add MCP server
 
-Split spec (before and after generated code)
+Test recreatability (branch and create from scratch)
 
+Readup on how to use Serenity   
 
-Tidy up
-* Updated run instructions in README and batch file
-
-
-Test recreatability
-
-
-===
+=== Update move to presentation ==
+* Presentation
+* 
 
 Presentation / Demo
 
@@ -30,3 +25,7 @@ What does this mean?
 * Done in a way that allows business users to inpect the outcome
 * Guarantee the results when run 
 * Already impact for coders, this is now coming for business users (all of them are just coders)
+
+
+Slides to add
+* about testing

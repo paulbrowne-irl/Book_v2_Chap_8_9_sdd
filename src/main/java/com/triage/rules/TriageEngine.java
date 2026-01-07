@@ -16,13 +16,18 @@ import java.util.List;
 
 public class TriageEngine {
 
+    private String drlPath = "generated_rules/triage.drl";
     private KieContainer kContainer;
+
+    public void setDrlPath(String drlPath) {
+        this.drlPath = drlPath;
+    }
 
     public void init() {
         KieServices ks = KieServices.Factory.get();
         KieFileSystem kfs = ks.newKieFileSystem();
 
-        File drlFile = new File("generated_rules/triage.drl");
+        File drlFile = new File(this.drlPath);
         if (!drlFile.exists()) {
             throw new RuntimeException("Rules file not found: " + drlFile.getAbsolutePath());
         }
