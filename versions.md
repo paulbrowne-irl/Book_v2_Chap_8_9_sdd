@@ -1,3 +1,6 @@
 TAG0_1: Initial working version, needs tidy of UI plus clear spec to recreate
 TAG0_2: updated worked version - generated from spec only
 TAG1 : RC - Working version, command line
+Branch? GUI
+Branch? MCP
+Branch? Web
