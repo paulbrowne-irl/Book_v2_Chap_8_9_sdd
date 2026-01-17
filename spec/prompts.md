@@ -1,3 +1,5 @@
+*Basic Prompts - Core project*
+
 Please implement the specification in spec1.md
 
 Follow the requirements exactly as specified.
@@ -8,6 +10,14 @@ Compare the existing project to the  specification in spec1.md and make any nece
 
 Follow the specification exactly as specified.
 
-===
+*Additional Prompts - GUI*
+Please implement the specification in spec-GUI.md,
+    taking in additional infomrmation
+    priottiy to GUI
 
+Follow the requirements exactly as specified.
+
+
+
+*Misc Prompts - Core project*
 Suggest improvements to the spec1.md file to implement current best technical practices and frameworks. Suggest improvements for clarity for business readers.

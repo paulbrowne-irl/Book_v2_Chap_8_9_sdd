@@ -146,10 +146,10 @@ i.  **Data Model**:
 
 7. **README.md**:
     - Provide a clear readme.md summarizing what the application does
-    - Provide a clear readme.md file documenting the how to generate the rules and run the application via Web, Command line and Swing.
+    - Provide a clear readme.md file documenting the how to generate the rules and run the application Command line.
     - Provide a clear readme.md file documenting the how to run the tests
     - Describe the application structure and technical archicture.
-
+    
 
 ---
 
