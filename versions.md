@@ -6,3 +6,9 @@ L- ?? Branch:MCP - attempt to add MCP to TAG1 Base
 L- ?? Branch:Web - attempt to add Web to TAG1 Base
 TAG2: GUI - Working version using Swing
 TAG3 : Empty - Spec only (i.e. start of project)
+
+
+Branches
+- main - working version both spec and (working generated code) - Mainly GUI
+- tag1 - earlier working version, console only example
+- starting spec - spec only, mainly to "try to recreate this at home"
